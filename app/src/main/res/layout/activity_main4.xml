@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity4">
+
+
+    <Button
+        android:id="@+id/other_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        />
+
+
+    <!-- 다른 위젯 기준으로 상대적 배치하기 -->
+    <Button
+        android:id="@+id/other_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼2"
+
+        android:layout_below="@+id/other_btn"
+        android:layout_alignParentRight="true"
+        />
+
+    <!-- 다른 위젯 기준으로 정렬 배치하기
+    parent속성만 뺴면됨
+    -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼3"
+
+        android:layout_alignBottom="@+id/other_btn2"
+        />
+
+</RelativeLayout>
