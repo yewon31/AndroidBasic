@@ -48,6 +48,48 @@
         />
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="백그라운드 디자인"
+        android:background="@drawable/textview_rounded_circle"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="백그라운드 디자인"
+        android:background="@drawable/textview_rounded_rectangle"
+        android:padding="10dp"
+        />
+
+    <!--
+    버튼 디자인, 직접디자인
+    -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffff00"
+        app:cornerRadius="0dp"
+        android:text="버튼디자인"
+        android:textColor="#ff0000"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="이름"
+        android:background="@drawable/edittext_rounded_rectangle"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="숫자"
+        android:background="@drawable/edittext_rounded_rectangle"
+        />
 
 
 
