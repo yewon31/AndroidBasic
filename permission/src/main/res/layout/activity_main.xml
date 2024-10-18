@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/permission_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        />
+
+
+    <Button
+        android:id="@+id/permission_one_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="단일권한 카메라"
+        />
+
+    <Button
+        android:id="@+id/permission_multi_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다중권한 사진첩"
+        />
+
+
+    <Button
+        android:id="@+id/noti_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기기로 알림보내기"
+        />
+
+
+</LinearLayout>
