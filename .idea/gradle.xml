@@ -12,6 +12,8 @@
             <option value="$PROJECT_DIR$/activity" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/permission" />
+            <option value="$PROJECT_DIR$/recyclerview" />
+            <option value="$PROJECT_DIR$/roomdatabase" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

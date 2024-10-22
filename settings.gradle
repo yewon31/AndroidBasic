@@ -23,3 +23,5 @@ rootProject.name = "AndroidBasic"
 include ':app'
 include ':activity'
 include ':permission'
+include ':recyclerview'
+include ':roomdatabase'
