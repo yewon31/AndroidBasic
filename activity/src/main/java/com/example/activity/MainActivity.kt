@@ -1,14 +1,20 @@
-package com.example.activity
+package com.coding404.activity
 
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.result.registerForActivityResult
 import androidx.appcompat.app.AppCompatActivity
-import com.example.activity.databinding.ActivityMainBinding
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.coding404.activity.databinding.ActivityMainBinding
+import kotlin.math.log
 
 const val TAG = "myLog"
 
@@ -25,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         Log.d(TAG, ": 콜백실행됨 $it")
         if(it.resultCode == Activity.RESULT_OK) {
-            
+
             //성공시 실행할 코드를 동작 - data를 받는게 가능함
             var callback = it.data?.getStringExtra("callback")
             Toast.makeText(this, "콜백데이터 :$callback", Toast.LENGTH_SHORT).show()
@@ -68,10 +74,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MyIntent::class.java)
             activityLauncher.launch(intent)
             //finish() //엑티비티종료
-            
+
         }
-    
-        
+
+
         //암시적인텐트
         binding.changeBtn2.setOnClickListener {
 

@@ -2,11 +2,14 @@ package com.coding404.roomdatabase
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.coding404.roomdatabase.databinding.RecyclerviewItemBinding
 
-class MemberAdapter(val list: ArrayList<MemberEntity> ) : RecyclerView.Adapter<MemberAdapter.MemberViewHolder>() {
+class MemberAdapter(val list: ArrayList<MemberEntity>,
+                    val updateListener : (id: Int) -> Unit,
+                    val deleteListener : (id: Int) -> Unit ) : RecyclerView.Adapter<MemberAdapter.MemberViewHolder>() {
 
 
     //내부클래스의 생성자에는 리사이클러뷰 아이템 xml
@@ -40,8 +43,19 @@ class MemberAdapter(val list: ArrayList<MemberEntity> ) : RecyclerView.Adapter<M
             holder.row.setBackgroundColor( ContextCompat.getColor(context , R.color.white ) )
         }
 
+        //업데이트 버튼에 이벤트
+        holder.modifyBtn.setOnClickListener {
+            updateListener(item.id)
+        }
 
-        
+        //삭제 버튼에 이벤트
+        holder.deleteBtn.setOnClickListener {
+            deleteListener(item.id)
+        }
+
     }
+
+
+
 
 }

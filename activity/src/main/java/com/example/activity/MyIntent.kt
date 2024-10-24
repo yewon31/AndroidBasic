@@ -1,8 +1,12 @@
-package com.example.activity
+package com.coding404.activity
 
 import android.os.Bundle
+import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.activity.databinding.ActivityMyIntentBinding
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.coding404.activity.databinding.ActivityMyIntentBinding
 
 class MyIntent : AppCompatActivity() {
 
