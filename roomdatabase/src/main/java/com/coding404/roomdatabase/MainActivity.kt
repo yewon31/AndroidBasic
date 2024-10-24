@@ -78,9 +78,20 @@ class MainActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
 
-            val list : List<MemberEntity> = repository.getMember()
+            //1st
+            //val list : List<MemberEntity> = repository.getMember()
+            //setUpRecyclerView(list as ArrayList )
+
+            //2nd
+            //데이터베이스에 변화가 일어나면, collect가 데이터를 수집해서 동작하게 됩니다.
+            //단점 - 전체데이터를 가지고 나와서, 화면에 반영을 해야하기 때문에, 리사이클러뷰를 다시 변경해야합니다.
+            repository.getMember().collect() {
+
+                setUpRecyclerView(it as ArrayList )
+            }
+
             //리사이클러뷰 어댑터에 list를 전달
-            setUpRecyclerView(list as ArrayList )
+
         }
     }
 

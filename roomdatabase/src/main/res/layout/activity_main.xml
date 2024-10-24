@@ -79,12 +79,17 @@
         app:layout_constraintTop_toBottomOf="@+id/add_btn"
         />
 
+
+    <!--
+        width, height를 0으로 맞추고, weight로 전체영역을 잡아주는 방법으로
+    -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/member_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
 
         app:layout_constraintTop_toBottomOf="@+id/text_title"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 
 
